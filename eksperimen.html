@@ -1,11 +1,69 @@
 <!DOCTYPE html>
 
 <html>
-	<head>
-	</head>
-	<body>
-		coba nbsp gan ini dia=&nbsp;oke mantap
-	</body>
+<head>
+	<style>
+		/* ada macem macem style selector:
+			1. Type selector = di kolom style udah ditentuin elemennya
+			2. Class Selector = buat class, di html nanti ditentuin
+			3. ID Selector = berdasarkan ID
+		*/
+		/* Class selector */
+		.red {
+				color: red;
+		}
+		.skyblue-bg {
+				background-color: skyblue;
+		}
+		.fancy {
+				font-weight; bold;
+				text-shadow: 4px 4px 3px #77f;
+		}
+		/* fancy class for paragraf element */
+		p.fancy {
+				text-shadow: 4px 4px 3px #00c8eb;
+		}
+
+		/* ID Based Selector Style Rules*/
+		#special {
+			background-color: skyblue;
+		}
+
+		/*Attribute Selector */
+		a[href] {
+			color:blue;
+		}
+		a[href^="#"] {
+			background-color: gold;
+		}
+		a[href*="example"] {
+			background-color: silver;
+		}
+		a[href$=".org"] {
+			color:red;
+		}
+	</style>
+</head>
+<body>
+<!--Class based HTML Styling--!>
+	<p class="red"> paragraf dengan teks merah </p>
+	<p class="skyblue-bg"> paragraf background langit </p>
+	<p class="fancy"> Paragraf gaya fancy </p>
+	<h1 class="fancy"> Heading gaya fancy </h1>
+	<p class="red skyblue-bg"> Paragraf gabungan </p>
+<!--ID Based HTML Styling--!>
+	<div id="special">
+		<p> konten di div dengan id special </p>
+	</div>
+	<!--ID sifatnya unik bagusnya cuma buat 1, kalo mau banyak pake class--!>
+<!--Attribute Based Styling--!>
+	<ul>
+		<li><a href="#internal">Internal link</a></li>
+		<li><a href="http://example.com">Example link</a></li>
+		<li><a href="#InSensitive">Insensitive internal link</a></li>
+		<li><a href="http://example.org">Example org link</a></li>
+	</ul>		
+</body>
 
 </html>
 
