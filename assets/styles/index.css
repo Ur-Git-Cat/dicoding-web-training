@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;700&display=swap');
 
+#content {
+    float: left; /*dengan float bisa nentuin posisitext dan diletakan di inline elemen sekitarnya ngewrap*/
+    width: 75%;
+}
 
 body {
 	font-family: 'Quicksand', sans-serif;
@@ -38,15 +42,31 @@ nav li {
     margin-right: 20px;
 }
 
+header {
+    display: inline; /*kayaknya sticky cuma kerja buat inline */
+}
+
 nav {
     background-color: #00a2c6;
     padding: 5px;
+    position: sticky; /*make the nav sticky*/
+    top: 0px; /*agar supaya saat scrop tetap di top*/
 }
 
 main {
     padding: 20px;
+    overflow: auto;
 }
 
+aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
 /*why nav li rule position must put after nav on the above and above the header rule????*/
 /* to be precised, why selector type must put above class selector to work???*/
 
@@ -66,7 +86,7 @@ main {
 }
 
 .card {
-    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 5px 0 rgba(0,0,0,0.2);
     border-radius: 5px;
     padding: 20px;
     margin-top: 20px;
@@ -78,5 +98,23 @@ main {
     background-color: #00c8eb;
     text-align: center;
     color: white;
+}
+/*Rule untuk media screen (hp) dan memenuhi width <=992px */
+@media screen and (max-width:992px) {
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+}
+}
 
+@media screen and (max-width:600px){
+    #content,
+    aside {
+        width: 100%;
+        padding: 0;
+    }
+}
 
+/*AKA media queries*/

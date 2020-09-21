@@ -8,6 +8,16 @@
 			2. Class Selector = buat class, di html nanti ditentuin
 			3. ID Selector = berdasarkan ID
 		*/
+        /* Type Selector */
+        h1 {
+            background-color: #aaaaaa;
+            padding: 30px;
+        }
+        
+        h3 {
+            background-color: blue;
+            padding: 20px;
+        }
 		/* Class selector */
 
 
@@ -23,8 +33,12 @@
 		}
 		/* fancy class for paragraf element */
 		p.fancy {
-				text-shadow: 4px 4px 3px #00c8eb;
+            text-shadow: 4px 4px 3px #00c8eb;
 		}
+
+        p {
+            width: 450px;
+        }
         
 
 		/* ID Based Selector Style Rules*/
@@ -46,11 +60,32 @@
 			color:red;
             text-decoration : none;
 		}
-        .relative {
+
+        /* EOL about selector */
+        
+        /*Position*/
+        /*2 types of flow: static flow & non-static flow
+            Static flow = Normal page position flow
+            Non-static = outside the normal flow
+        */
+
+        .relative { /*non static flow tapi tetap dianggap keberadaan normalnya sama si static flow */
             position: relative;
-            top: 40px;
+            top: 40px; /*relatif dari posisi normalnya */
             left: 200px;
         }
+
+        .absolute {  /* keberadaan diabaikan normal flow */
+            position: absolute;
+            top: 0; /*relatif dari windows atau terhadap elemen induk (kalo elemen induk juga di luar normal flow*/
+            left: 500px;
+        }
+
+        .fixed { /*relatif terhadap browser, ga peduli sama divnya */
+            position: fixed; /*ketika scrolling posisinya tetep */
+            top: 0;
+            left: 0;
+        } 
 
         </style>
 </head>
@@ -74,9 +109,12 @@
 		<li><a href="http://example.org">Example org link</a></li>
 	</ul>		
     <article>
+    <h1> Pengagguran produktif </h1>
         <p> Normal text 1, bingung dapet kerjaan coy kok ga kerja kerja ya heran, tapi ikhtiar aja terus sambil belajar html ye gak di dicoding, nah paragraf ini buat eksperimen 1 </p>
         <p class="relative"> Normal text 2, bingung dapet kerjaan coy kok ga kerja kerja ya heran, tapi ikhtiar aja terus sambil belajar html ye gak di dicoding, nah paragraf ini buat eksperimen 2 </p>
-        <p> Normal text 3, bingung dapet kerjaan coy kok ga kerja kerja ya heran, tapi ikhtiar aja terus sambil belajar html ye gak di dicoding, nah paragraf ini buat eksperimen 3 </p>
+        <h1 class="absolute"> Pengangguran Produktif, Eksperimen 3 </h1>
+        <p> Normal text 4, bingung dapet kerjaan coy kok ga kerja kerja ya heran, tapi ikhtiar aja terus sambil belajar html ye gak di dicoding, nah paragraf ini buat eksperimen 4 </p>
+    <h3 class="fixed"> Pengangguran produktif oi </h3>
 </body>
 
 </html>
